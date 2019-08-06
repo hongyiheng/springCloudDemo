@@ -1,0 +1,49 @@
+
+
+
+#DB Configuration:
+spring:
+#  datasource:
+#    driverClassName: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/team6
+#    username: root
+#    password: 123456
+#    user:
+#      name: hyh
+#      age: 22
+#      language:
+#        -java
+#        -php
+#        -english
+#        -chinese
+  mvc:
+    view:
+      prefix: /WEB-INF/views
+      suffix: .jsp
+    servlet:
+      path: /
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/team6
+    username: root
+    password: 123456
+
+#
+##spring集成Mybatis环境
+##pojo别名扫描包
+#mybatis.type-aliases-package: com.example.pojo
+#  #加载Mybatis映射文件
+#mybatis.mapper-locations: classpath:mapper/*Mapper.xml
+server:
+  port: 8088
+
+logging:
+  level:
+    com.example: debug
+#    org.springframework: debug
+#开启驼峰匹配
+mybatis:
+  type-aliases-package: com.example.pojo
+#    configuration:
+#    map-underscore-to-camel-case: true
+#  mapper-locations: mapper/*.xml
